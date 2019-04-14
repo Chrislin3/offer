@@ -1,5 +1,9 @@
 package solution4;
 
+/**
+ * 给定一个二维数组，其每一行从左到右递增排序，从上到下也是递增排序。
+ * 给定一个数，判断这个数是否在该二维数组中。
+ */
 public class Find {
     public boolean find(int target, int [][] array) {
         if((array==null||array.length==0)||(array.length==1 && array[0].length==0)){ //
