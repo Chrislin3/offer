@@ -6,7 +6,7 @@ public class MovingCount {
     private int rows;
     private int cols;
     private int threshold;
-    private int[][] digitSum;
+    public int[][] digitSum;
 
     public int movingCount(int threshold, int rows, int cols) {
         this.rows = rows;
