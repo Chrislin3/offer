@@ -9,25 +9,32 @@ import solution6.ListNode;
  */
 public class DeleteDuplication {
     public ListNode deleteDuplication(ListNode pHead) {
-        if(pHead == null){
-            return null;
-        }
-        ListNode cur = pHead;
-        while (cur != null){
-            if(cur.val == cur.next.val){
-                if(cur.next.next != null){
-                    cur.next = null;
-                }
-                else {
-                    cur.val = cur.next.next.val;
-                    cur.next.val = cur.next.next.val;
-                    cur.next = cur.next.next.next;
-                    cur.next.next = cur.next.next.next.next;
-                }
+//        if (pHead == null) {
+//            return null;
+//        }
+//        ListNode next = pHead.next;
+//        if (pHead.val == next.val) {
+//            while (next != null && pHead.val == next.val){
+//                next = next.next;
+//            }
+//            return deleteDuplication(next);
+//        }
+//        else {
+//            pHead.next = deleteDuplication(pHead.next);
+//            return pHead;
+//        }
 
-            }
-            cur = cur.next;
+        if (pHead == null || pHead.next == null)
+            return pHead;
+        ListNode next = pHead.next;
+        if (pHead.val == next.val) {
+            while (next != null && pHead.val == next.val)
+                next = next.next;
+            return deleteDuplication(next);
+        } else {
+            pHead.next = deleteDuplication(pHead.next);
+            return pHead;
         }
-        return pHead;
+
     }
 }

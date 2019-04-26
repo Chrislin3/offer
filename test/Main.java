@@ -2,7 +2,9 @@ package test;
 
 import solution10.RectCover;
 import solution12.HasPath;
+import solution18.DeleteDuplication;
 import solution18.DeleteNode;
+import solution23.EntryNodeOfLoop;
 import solution5.ReplaceSpace;
 import solution6.ListNode;
 import solution6.PrintListFromTailToHead;
@@ -35,10 +37,14 @@ public class Main {
         head.next.next = new ListNode(3);
         head.next.next.next = new ListNode(4);
         head.next.next.next.next = new ListNode(5);
-        head.next.next.next.next.next = new ListNode(6);
-        ListNode tobeDelete = head.next.next.next.next;
-        DeleteNode deleteNode = new DeleteNode();
-        deleteNode.deleteNode(head,tobeDelete);
-        System.out.println(head);
+        head.next.next.next.next.next = head.next.next;
+
+        EntryNodeOfLoop entrynodeofloop = new EntryNodeOfLoop();
+        entrynodeofloop.entryNodeOfLoop(head);
+//        DeleteDuplication deleteNode = new DeleteDuplication();
+//        deleteNode.deleteDuplication(head);
+//        System.out.println(head);
+        System.out.println("000");
+
     }
 }
