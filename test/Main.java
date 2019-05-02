@@ -10,6 +10,7 @@ import solution26.TreeNode;
 import solution27.Mirror;
 import solution30.MinStack;
 import solution31.IsPopOrder;
+import solution34.FindPath;
 import solution5.ReplaceSpace;
 import solution6.ListNode;
 import solution6.PrintListFromTailToHead;
@@ -84,6 +85,17 @@ public class Main {
         IsPopOrder isPopOrder = new IsPopOrder();
         System.out.println(isPopOrder.isPopOrder(pushA,pushB));
 
+    }
+    @Test
+    public void test34(){
+        TreeNode root = new TreeNode(10);
+        root.left = new TreeNode(5);
+        root.right = new TreeNode(12);
+        root.left.left = new TreeNode(4);
+        root.left.right = new TreeNode(7);
+
+        FindPath findPath = new FindPath();
+        findPath.findPath(root,22);
     }
 
 }
