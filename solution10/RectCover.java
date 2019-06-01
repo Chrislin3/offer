@@ -6,7 +6,7 @@ package solution10;
  */
 public class RectCover {
     public int RectCover(int target) {
-        if(target <= 3){
+        if (target <= 3) {
             return target;
         }
 
@@ -15,8 +15,8 @@ public class RectCover {
         rect[1] = 1;
         rect[2] = 2;
         rect[3] = 3;
-        for(int i = 4;i<=target;i++){
-            rect[i] = rect[i-1] + rect[i-2];
+        for (int i = 4; i <= target; i++) {
+            rect[i] = rect[i - 1] + rect[i - 2];
         }
         return rect[target];
     }

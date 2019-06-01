@@ -4,6 +4,7 @@ package solution6;
  */
 //使用栈的先进后出来完成
 //注意不要忘了导包！！！
+
 import java.util.ArrayList;
 import java.util.Stack;
 
@@ -12,11 +13,11 @@ public class PrintListFromTailToHead {
         ArrayList<Integer> arr = new ArrayList<Integer>();
         ListNode cur = listNode;
         Stack<Integer> stack = new Stack<Integer>();
-        while (cur != null){
+        while (cur != null) {
             stack.push(cur.val);
             cur = cur.next;
         }
-        while (!(stack.empty())){
+        while (!(stack.empty())) {
             arr.add(stack.pop());
         }
         return arr;

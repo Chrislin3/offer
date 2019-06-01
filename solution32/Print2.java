@@ -14,12 +14,12 @@ public class Print2 {
         ArrayList<ArrayList<Integer>> result = new ArrayList<>();
         Queue<TreeNode> queue = new LinkedList<>();
         queue.add(pRoot);
-        while (!queue.isEmpty()){
+        while (!queue.isEmpty()) {
             int num = queue.size();
             ArrayList<Integer> retCur = new ArrayList<>();
-            while (num-- >0){
+            while (num-- > 0) {
                 TreeNode cur = queue.poll();
-                if(cur == null){
+                if (cur == null) {
                     continue;
                 }
                 retCur.add(cur.val);
@@ -27,7 +27,7 @@ public class Print2 {
                 queue.add(cur.right);
 
             }
-            if(!retCur.isEmpty()){
+            if (!retCur.isEmpty()) {
                 result.add(retCur);
             }
 

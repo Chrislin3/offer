@@ -13,14 +13,14 @@ public class Print1 {
 
     public ArrayList<Integer> printFromTopToBottom(TreeNode root) {
         ArrayList<Integer> result = new ArrayList<>();
-        Queue<TreeNode> queue= new LinkedList<>();
+        Queue<TreeNode> queue = new LinkedList<>();
         queue.add(root);
-        while (!queue.isEmpty()){
+        while (!queue.isEmpty()) {
             int num = queue.size();
-            while (num-- > 0){
+            while (num-- > 0) {
                 TreeNode cur = queue.poll();
 
-                if(cur == null){
+                if (cur == null) {
                     continue;
                 }
                 result.add(cur.val);

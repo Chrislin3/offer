@@ -13,25 +13,25 @@ import solution6.ListNode;
  */
 public class FindKthToTail {
     public ListNode findKthToTail(ListNode head, int k) {
-        if(head == null){
+        if (head == null) {
             return null;
         }
         ListNode cur1 = head;
         ListNode cur2 = head;
         int len = 0;
         ListNode cur = head;
-        while (cur != null){
+        while (cur != null) {
             len++;
             cur = cur.next;
         }
-        if(k > len){
+        if (k > len) {
             return null;
         }
-        while (k >= 1){
+        while (k >= 1) {
             cur1 = cur1.next;
             k--;
         }
-        while (cur1 != null){
+        while (cur1 != null) {
             cur1 = cur1.next;
             cur2 = cur2.next;
         }

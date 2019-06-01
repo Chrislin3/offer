@@ -1,9 +1,10 @@
 package solution11;
 
-/**题目：
+/**
+ * 题目：
  * 把一个数组最开始的若干个元素搬到数组的末尾，我们称之为数组的旋转。
  * 输入一个非递减排序的数组的一个旋转，输出旋转数组的最小元素。
- *
+ * <p>
  * 例如数组 {3, 4, 5, 1, 2} 为 {1, 2, 3, 4, 5} 的一个旋转，该数组的最小值为 1。
  */
 
@@ -22,28 +23,28 @@ package solution11;
  * 例如对于数组 {1,1,1,0,1}，l、m 和 h 指向的数都为 1，此时无法知道最小数字 0 在哪个区间。
  */
 public class MinNumberInRotateArray {
-    public int minNumberInRotateArray(int [] array) {
+    public int minNumberInRotateArray(int[] array) {
         int low = 0;
         int high = array.length - 1;
 
-        while (low < high){
-            int mid = low +( high - low)/2;
-            if(!(!(array[low] == array[mid]) || !(array[mid] == array[high]))){
+        while (low < high) {
+            int mid = low + (high - low) / 2;
+            if (!(!(array[low] == array[mid]) || !(array[mid] == array[high]))) {
                 return minNumber(array, low, high);
             }
-            if(array[mid] >= array[high]){
+            if (array[mid] >= array[high]) {
                 low = mid + 1;
-            }
-            else {
+            } else {
                 high = mid;
             }
         }
         return array[high];
     }
-    private int minNumber(int[] array, int low, int high){
+
+    private int minNumber(int[] array, int low, int high) {
         int min = array[low];
-        for (int i = low;i< high;i++){
-            if(array[i] < min){
+        for (int i = low; i < high; i++) {
+            if (array[i] < min) {
                 min = array[i];
             }
         }

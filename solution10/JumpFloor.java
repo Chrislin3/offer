@@ -6,14 +6,14 @@ package solution10;
  */
 public class JumpFloor {
     public int jumpFloor(int target) {
-        if(target <= 2){
+        if (target <= 2) {
             return target;
         }
         int[] jump = new int[target + 1];
         jump[1] = 1;
         jump[2] = 2;
-        for(int i = 3;i<=target;i++){
-            jump[i] = jump[i-1] + jump[i-2];
+        for (int i = 3; i <= target; i++) {
+            jump[i] = jump[i - 1] + jump[i - 2];
         }
         return jump[target];
     }

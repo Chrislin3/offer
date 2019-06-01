@@ -14,19 +14,17 @@ public class StackToQueue {
     }
 
     public int pop() throws Exception {
-        if(stack1.empty() && stack2.empty()){
+        if (stack1.empty() && stack2.empty()) {
             throw new Exception("queue is empty");
-        }
-        else if(stack2.empty()){
-            while (! stack1.empty()){
+        } else if (stack2.empty()) {
+            while (!stack1.empty()) {
                 stack2.push(stack1.pop());
 
             }
             return stack2.pop();
-        }
-        else if(!stack2.empty()){
+        } else if (!stack2.empty()) {
             return stack2.pop();
         }
-       return 0;
+        return 0;
     }
 }

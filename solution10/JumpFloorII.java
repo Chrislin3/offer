@@ -8,6 +8,6 @@ package solution10;
 //多列几项就会发现规律是什么
 public class JumpFloorII {
     public int jumpFloorII(int target) {
-        return (int) Math.pow(2,target-1);
+        return (int) Math.pow(2, target - 1);
     }
 }

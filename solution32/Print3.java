@@ -14,13 +14,13 @@ public class Print3 {
         Queue<TreeNode> queue = new LinkedList<>();
         queue.add(pRoot);
         int ceng = 1;
-        while (!queue.isEmpty()){
-            ceng ++;
+        while (!queue.isEmpty()) {
+            ceng++;
             int num = queue.size();
             ArrayList<Integer> retCur = new ArrayList<>();
-            while (num-- >0){
+            while (num-- > 0) {
                 TreeNode cur = queue.poll();
-                if(cur == null){
+                if (cur == null) {
                     continue;
                 }
                 retCur.add(cur.val);
@@ -28,10 +28,10 @@ public class Print3 {
                 queue.add(cur.right);
 
             }
-            if(ceng % 2 == 1){
+            if (ceng % 2 == 1) {
                 Collections.reverse(retCur);
             }
-            if(!retCur.isEmpty()){
+            if (!retCur.isEmpty()) {
                 result.add(retCur);
             }
 

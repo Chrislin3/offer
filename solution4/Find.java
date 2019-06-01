@@ -5,8 +5,8 @@ package solution4;
  * 给定一个数，判断这个数是否在该二维数组中。
  */
 public class Find {
-    public boolean find(int target, int [][] array) {
-        if((array==null||array.length==0)||(array.length==1 && array[0].length==0)){ //
+    public boolean find(int target, int[][] array) {
+        if ((array == null || array.length == 0) || (array.length == 1 && array[0].length == 0)) { //
             return false;
         }
         int row = array.length;
@@ -14,16 +14,15 @@ public class Find {
 
         int i = 0;
         int j = col - 1;
-        while (array[i][j] != target){
-            if(array[i][j] < target){
+        while (array[i][j] != target) {
+            if (array[i][j] < target) {
                 i++;
-                if(i >= row){
+                if (i >= row) {
                     return false;
                 }
-            }
-            else {
+            } else {
                 j--;
-                if(j < 0){
+                if (j < 0) {
                     return false;
                 }
             }

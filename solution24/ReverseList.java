@@ -6,11 +6,11 @@ package solution24;
 import solution6.ListNode;
 
 public class ReverseList {
-    public ListNode reverseList(ListNode head){
+    public ListNode reverseList(ListNode head) {
         ListNode pre = null;
         ListNode cur = head;
 
-        while (cur != null){
+        while (cur != null) {
             ListNode next = cur.next;
             cur.next = pre;
             pre = cur;

@@ -11,6 +11,7 @@ import solution27.Mirror;
 import solution30.MinStack;
 import solution31.IsPopOrder;
 import solution34.FindPath;
+import solution39.MoreThanHalfNum_Solution;
 import solution5.ReplaceSpace;
 import solution6.ListNode;
 import solution6.PrintListFromTailToHead;
@@ -18,7 +19,7 @@ import solution6.PrintListFromTailToHead;
 import java.util.ArrayList;
 
 public class Main {
-//    public static void main(String[] args) {
+    //    public static void main(String[] args) {
 ////        StringBuffer str = new StringBuffer("hello w orld");
 ////        ReplaceSpace rs = new ReplaceSpace();
 ////
@@ -79,15 +80,16 @@ public class Main {
 //        System.out.println(ms.min());
 //    }
     @Test
-    public void test31(){
-        int[] pushA = {1,2,3,4,5};
-        int[] pushB = {4,5,3,2,1};
+    public void test31() {
+        int[] pushA = {1, 2, 3, 4, 5};
+        int[] pushB = {4, 5, 3, 2, 1};
         IsPopOrder isPopOrder = new IsPopOrder();
-        System.out.println(isPopOrder.isPopOrder(pushA,pushB));
+        System.out.println(isPopOrder.isPopOrder(pushA, pushB));
 
     }
+
     @Test
-    public void test34(){
+    public void test34() {
         TreeNode root = new TreeNode(10);
         root.left = new TreeNode(5);
         root.right = new TreeNode(12);
@@ -95,7 +97,14 @@ public class Main {
         root.left.right = new TreeNode(7);
 
         FindPath findPath = new FindPath();
-        findPath.findPath(root,22);
+        findPath.findPath(root, 22);
     }
 
+    @Test
+    public void test39() {
+        int[] arr = {1, 2, 3, 2, 4, 2, 5, 2, 3};
+        MoreThanHalfNum_Solution moreThanHalfNum_solution = new MoreThanHalfNum_Solution();
+        moreThanHalfNum_solution.moreThanHalfNum_Solution(arr);
+    }
 }
+
